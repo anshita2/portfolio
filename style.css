@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro", sans-serif;
+    scroll-behavior: smooth;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden ;
+    overflow-y: auto;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.logo{
+    width: 80px;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo-text{
+    margin-left: -1.2rem;
+    font-size: 28px;
+}
+
+.nav-items{
+    display: flex;
+    gap:2rem;
+    padding: 0 4em;
+}
+.nav-items a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    transition: font-weight 0.2s;
+}
+
+.nav-items a:hover{
+    font-weight: bold;
+}
+
+.hero-section{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    gap:2rem;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+    margin-left:1rem;
+}
+
+.hero-section-sub-heading{
+    font-size: 35px;
+    color: #343d68;
+    /* line-height: 45px; */
+    font-weight:45px;
+
+}
+
+.hero-section-description{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.pink-bttn{
+    background-color:#e84949 ;
+    width: fit-content;
+    padding:0.8rem 2.3rem;
+    color: aliceblue;
+    font-weight: 500;
+    box-shadow: 5px 5px 5px grey;
+    border: solid 3px #e84949;
+    position: relative;
+    z-index: 1;
+}
+
+.pink-bttn::before{
+    content:'';
+    background-color:aliceblue;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition-duration: 1s;
+
+}
+
+.pink-bttn:hover::before{
+    transform: scaleX(1);
+}
+
+.pink-bttn:hover{
+    border: solid 3px #e84949;
+    color: black;
+}
+
+.hero-section-right{
+    position: relative;
+}
+.user-image img{
+    filter: grayscale(1);
+    padding: 2.5rem;
+    animation: scaling 5s infinite ease-in-out;
+}
+
+@keyframes scaling{
+    0%{
+        filter: grayscale(0);
+        transform:scale(1);
+    }
+
+    50%{
+        filter: grayscale(1);
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px gray;
+    }
+
+    100%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+}
+
+.absolute{
+    position: absolute;
+}
+
+.circle{
+    left:0;
+    bottom:0;
+    animation: circle 6s infinite linear;
+}
+@keyframes circle{
+    50%{
+        left:5%;
+        bottom:10%;
+    }
+}
+
+.cube{
+    top:-0.8em;
+    right:1em;
+    animation: cube 4s infinite linear;
+}
+@keyframes cube{
+    50%{
+        transform:  rotateY(180deg) translateY(-12px);
+    }
+}
+.dots{
+    bottom:-1rem;
+    right:0;
+    animation: dots 5s infinite;
+}
+@keyframes dots{
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+.plus{
+    top:-0.8rem;
+    left: 50%;
+    animation: plus 4s infinite;
+}
+@keyframes plus{
+    50%{
+        top:3%;
+        left:48%
+    }
+}
+
+.zigzag{
+    top:1.5em;
+    left:-0.3em;
+    animation: zigzag 5s infinite;
+}
+@keyframes zigzag{
+    50%{
+        transform: translateX(40px);
+    }
+}
+
+.faded-text{
+    position: absolute;
+    user-select:none;
+    font-size: 7em;
+    color:rgb(231,231,231);
+    
+    bottom: -16%;
+    left:-3%;
+    font-weight: bold;
+    transition: all 3s;
+}
